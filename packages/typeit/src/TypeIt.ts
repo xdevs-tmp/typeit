@@ -514,6 +514,9 @@ class TypeIt {
       (this.cursor as El).dataset.tiAnimationId = this.id;
 
       let { animation } = this.opts.cursor as CursorOptions;
+      if(!animation) {
+        return ;
+      }
       let { frames, options } = animation;
 
       setCursorAnimation({
